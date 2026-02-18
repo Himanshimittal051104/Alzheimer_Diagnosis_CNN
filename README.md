@@ -43,7 +43,7 @@ In this project:
 ---
 
 ## 📂 Project Structure
-Alzheimer-Diagnosis-CNN/
+Alzheimer_Diagnosis_CNN/
 │
 ├── Alzheimer_project_CNN.ipynb
 ├── README.md
@@ -97,12 +97,12 @@ The dataset consists of **MRI brain images** categorized into multiple classes r
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Himanshimittal051104/Alzheimer-Diagnosis-CNN.git
+git clone https://github.com/Himanshimittal051104/Alzheimer_Diagnosis_CNN.git
 ```
 
 2. Navigate to the project folder:
 ```bash
-cd Alzheimer-Diagnosis-CNN
+cd Alzheimer_Diagnosis_CNN
 ```
 
 3. Install dependencies::
