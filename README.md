@@ -43,11 +43,13 @@ In this project:
 ---
 
 ## 📂 Project Structure
+```md
 Alzheimer_Diagnosis_CNN/
 │
 ├── Alzheimer_project_CNN.ipynb
 ├── README.md
 └── dataset/ (not included in repository)
+```
 
 ---
 
