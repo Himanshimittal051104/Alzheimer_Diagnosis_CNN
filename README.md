@@ -200,59 +200,39 @@ The project contains six experiments.
 
 ### Experiment 1 — Baseline CNN
 
-- A basic CNN architecture was implemented as the reference model.
-
-- Test Accuracy: 96.17%
-- Macro F1: 0.9684
-
+- A basic CNN architecture was implemented as the reference model for the project.
+- The model consists of three convolutional blocks, each containing a convolutional layer, ReLU activation, and max pooling, followed by fully connected layers for four-class classification.
+- This experiment establishes the baseline against which the subsequent experiments are compared.
+  
 ### Experiment 2 — Batch Normalization
 
-- Batch Normalization was added after the convolutional layers to study its effect on training stability and performance.
-
-- Test Accuracy: 35.03%
-- Macro F1: 0.1297
-
-- Additional configurations involving batch size and BatchNorm momentum were also investigated.
+- Batch Normalization was added after the convolutional layers to investigate its effect on training stability and model performance.
+- The experiment also used Adaptive Average Pooling before the fully connected layers to reduce the number of parameters in the classifier.
+- Different Batch Normalization configurations were investigated, including batch size and BatchNorm momentum.
 
 ### Experiment 3 — Dropout
 
-- Dropout with a probability of 0.5 was added to the fully connected layers to study its effect on overfitting and generalization.
-
-- Test Accuracy: 96.09%
-- Macro F1: 0.9714
+- Dropout was introduced into the fully connected layers to investigate its effect on overfitting and generalization.
+- A dropout probability of 0.5 was used during training. Dropout randomly deactivates a portion of neurons during each training step, encouraging the network to learn more robust features.
 
 ### Experiment 4 — Data Augmentation
 
 - Random Rotation and Random Horizontal Flip were applied to the training images.
-
-- Test Accuracy: 60.44%
-- Macro F1: 0.6061
-
 - The experiment also investigated the effect of the transformation order.
 
 ### Experiment 5 — CNN Tuning
 
-- The CNN architecture and training hyperparameters were modified to study their effect on model performance.
-
-- The tested configurations included:
-
-  - Additional convolutional layer
-  - Batch size tuning
-  - Learning rate tuning
-
-- The configuration using a learning rate of 0.0001 and batch size 16 achieved:
-
-  - Test Accuracy: 94.14%
-  - Macro F1: 0.9384
+- The CNN architecture and training hyperparameters were modified to investigate their effect on model performance.
+- The experiment was conducted in three stages:
+  - **Additional Convolutional Layer:** A deeper CNN architecture was tested by adding an extra convolutional layer.
+  - **Batch Size Tuning:** The batch size was increased from 16 to 32 to study its effect on training and generalization.
+  - **Learning Rate Tuning:** The learning rate was reduced from 0.001 to 0.0001 to investigate its effect on convergence and performance.
 
 ### Experiment 6 — ResNet-18
 
-- A pretrained ResNet-18 model initialized with ImageNet weights was evaluated for the four-class MRI classification task.
-
-- The final classification layer was replaced with a four-class output layer.
-
-- Test Accuracy: 93.90%
-- Macro F1: 0.9575
+- A pretrained ResNet-18 model was evaluated using transfer learning for the four-class MRI classification task.
+- The model was initialized with pretrained ImageNet weights, and the original final classification layer was replaced with a new fully connected layer containing four output classes.
+- No data augmentation was applied in this experiment so that the effect of the pretrained ResNet-18 architecture could be evaluated separately.
 
 ---
 
