@@ -194,7 +194,65 @@ Each notebook contains the corresponding model implementation, training process,
 
 ---
 
+## 🧪 Experiments
 
+The project contains six experiments.
+
+### Experiment 1 — Baseline CNN
+
+A basic CNN architecture was implemented as the reference model.
+
+Test Accuracy: 96.17%
+Macro F1: 0.9684
+
+### Experiment 2 — Batch Normalization
+
+Batch Normalization was added after the convolutional layers to study its effect on training stability and performance.
+
+Test Accuracy: 35.03%
+Macro F1: 0.1297
+
+Additional configurations involving batch size and BatchNorm momentum were also investigated.
+
+### Experiment 3 — Dropout
+
+Dropout with a probability of 0.5 was added to the fully connected layers to study its effect on overfitting and generalization.
+
+Test Accuracy: 96.09%
+Macro F1: 0.9714
+
+### Experiment 4 — Data Augmentation
+
+Random Rotation and Random Horizontal Flip were applied to the training images.
+
+Test Accuracy: 60.44%
+Macro F1: 0.6061
+
+The experiment also investigated the effect of the transformation order.
+
+### Experiment 5 — CNN Tuning
+
+The CNN architecture and training hyperparameters were modified to study their effect on model performance.
+
+The tested configurations included:
+
+Additional convolutional layer
+Batch size tuning
+Learning rate tuning
+
+The configuration using a learning rate of 0.0001 and batch size 16 achieved:
+
+Test Accuracy: 94.68%
+Macro F1: 0.9483
+
+### Experiment 6 — ResNet-18
+
+A pretrained ResNet-18 model initialized with ImageNet weights was evaluated for the four-class MRI classification task.
+
+The final classification layer was replaced with a four-class output layer.
+
+Test Accuracy: 93.90%
+Macro F1: 0.9575
 
 ---
 
