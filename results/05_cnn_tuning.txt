@@ -134,38 +134,38 @@ Training History
 --------------------------------------------------
 
 Epoch    Train Loss    Train Acc    Val Loss    Val Acc
-1        0.7826       0.6365       0.4572      0.8170
-2        0.3652       0.8467       0.2738      0.8922
-3        0.2174       0.9144       0.1968      0.9149
-4        0.1167       0.9576       0.1575      0.9367
-5        0.0584       0.9797       0.1203      0.9570
-6        0.0474       0.9837       0.1032      0.9609
-7        0.0169       0.9954       0.1424      0.9530
-8        0.0302       0.9891       0.1245      0.9619
-9        0.0103       0.9972       0.0926      0.9723
-10       0.0133       0.9953       0.1000      0.9683
+1        0.7780        0.6414       0.4281      0.8239
+2        0.3628        0.8453       0.2943      0.8749
+3        0.2211        0.9103       0.2008      0.9164
+4        0.1186        0.9577       0.1497      0.9402
+5        0.0597        0.9795       0.0999      0.9585
+6        0.0373        0.9885       0.1134      0.9535
+7        0.0360        0.9874       0.1367      0.9530
+8        0.0365        0.9874       0.0940      0.9659
+9        0.0093        0.9978       0.0994      0.9679
+10       0.0162        0.9939       0.0885      0.9713
 
 --------------------------------------------------
 Overall Performance
 --------------------------------------------------
 
-Test Accuracy: 0.9468
-Macro F1 Score: 0.9483
+Test Accuracy: 0.9414
+Macro F1 Score: 0.9384
 
 --------------------------------------------------
 Classification Report
 --------------------------------------------------
 
-                     precision    recall    f1-score    support
+                     precision    recall  f1-score   support
 
-Mild Impairment         0.92      0.97        0.95        179
-Moderate Impairment     0.92      1.00        0.96         12
-No Impairment           0.94      0.98        0.96        640
-Very Mild Impairment    0.97      0.89        0.93        448
+Mild Impairment          0.98      0.93      0.96       179
+Moderate Impairment      0.86      1.00      0.92        12
+No Impairment            0.92      0.98      0.95       640
+Very Mild Impairment     0.96      0.89      0.93       448
 
-accuracy                                      0.95       1279
-macro avg               0.94      0.96        0.95       1279
-weighted avg            0.95      0.95        0.95       1279
+accuracy                                     0.94      1279
+macro avg                0.93      0.95      0.94      1279
+weighted avg             0.94      0.94      0.94      1279
 
 
 ==================================================
@@ -176,7 +176,7 @@ Configuration                 Learning Rate    Batch Size    Test Accuracy    Ma
 
 Extra Conv Layer              0.001            16            0.7592           0.7534
 Batch Size Tuning             0.001            32            0.9007           0.8910
-Learning Rate Tuning          0.0001           16            0.9468           0.9483
+Learning Rate Tuning          0.0001           16            0.9414           0.9384          
 
 
 ==================================================
@@ -189,8 +189,8 @@ To investigate whether the performance of the deeper CNN could be improved, hype
 
 Increasing the batch size from 16 to 32 improved the test accuracy from 75.92% to 90.07% and the macro F1-score from 0.7534 to 0.8910. This shows that the larger batch size provided better performance for the deeper CNN under the tested configuration.
 
-The learning rate was then reduced from 0.001 to 0.0001 while keeping the batch size at 16. This configuration achieved a test accuracy of 94.68% and a macro F1-score of 0.9483, which was higher than the other configurations tested in this experiment.
+The learning rate was then reduced from 0.001 to 0.0001 while keeping the batch size at 16. This configuration achieved a test accuracy of 94.14% and a macro F1-score of 0.9384, which was higher than the other configurations tested in this experiment.
 
 Overall, the results show that the performance of the deeper CNN was strongly affected by the choice of training hyperparameters. The initial configuration with a learning rate of 0.001 and batch size of 16 performed substantially worse, while adjusting the batch size and learning rate resulted in significant improvements.
 
-Among the configurations tested in this experiment, the learning rate of 0.0001 with a batch size of 16 achieved the highest test accuracy of 94.68% and the highest macro F1-score of 0.9483.
+Among the configurations tested in this experiment, the learning rate of 0.0001 with a batch size of 16 achieved the highest test accuracy of 94.14% and the highest macro F1-score of 0.9384.
