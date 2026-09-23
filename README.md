@@ -242,8 +242,8 @@ Learning rate tuning
 
 The configuration using a learning rate of 0.0001 and batch size 16 achieved:
 
-Test Accuracy: 94.68%
-Macro F1: 0.9483
+Test Accuracy: 94.14%
+Macro F1: 0.9384
 
 ### Experiment 6 — ResNet-18
 
