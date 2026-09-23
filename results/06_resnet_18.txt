@@ -1,0 +1,86 @@
+==================================================
+Experiment 6: ResNet-18
+==================================================
+
+Model:
+Pretrained ResNet-18
+
+Training Configuration:
+- Epochs: 10
+- Batch Size: 16
+- Optimizer: Adam
+- Learning Rate: 0.001
+- Loss Function: CrossEntropyLoss
+- Input Size: 224 x 224
+- Number of Classes: 4
+- Pretrained Weights: ImageNet
+
+--------------------------------------------------
+Why ResNet-18?
+--------------------------------------------------
+
+ResNet-18 was introduced to investigate whether a deeper and more advanced convolutional neural network architecture could effectively classify the Alzheimer MRI images.
+
+ResNet-18 uses residual connections, which allow information and gradients to flow through the network more effectively during training. This makes it possible to train deeper networks while reducing the difficulty associated with learning through many layers.
+
+For this experiment, ResNet-18 was initialized with pretrained ImageNet weights. The original final classification layer was replaced with a new fully connected layer containing four output classes corresponding to the four Alzheimer disease categories.
+
+No data augmentation was applied in this experiment. The same dataset split, image size, normalization, batch size, and evaluation procedure used in the previous experiments were maintained to provide a consistent evaluation setup.
+
+
+--------------------------------------------------
+Training History
+--------------------------------------------------
+
+Epoch    Train Loss    Train Acc    Val Loss    Val Acc
+1        0.5590       0.7609       0.5534      0.7710
+2        0.3047       0.8813       0.4038      0.8492
+3        0.2061       0.9220       0.2543      0.9159
+4        0.1054       0.9640       0.1856      0.9357
+5        0.0889       0.9680       0.3200      0.8912
+6        0.0748       0.9729       0.1620      0.9416
+7        0.0514       0.9808       0.1067      0.9649
+8        0.0448       0.9852       0.1424      0.9634
+9        0.0474       0.9833       0.1867      0.9446
+10       0.0322       0.9885       0.1005      0.9693
+
+
+--------------------------------------------------
+Overall Performance
+--------------------------------------------------
+
+Test Accuracy: 0.9390
+Macro F1 Score: 0.9575
+
+
+--------------------------------------------------
+Classification Report
+--------------------------------------------------
+
+                     precision    recall    f1-score    support
+
+Mild Impairment         0.99      0.94        0.97        179
+Moderate Impairment     1.00      1.00        1.00         12
+No Impairment           0.96      0.93        0.95        640
+Very Mild Impairment    0.89      0.95        0.92        448
+
+accuracy                                      0.94       1279
+macro avg               0.96      0.96        0.96       1279
+weighted avg            0.94      0.94        0.94       1279
+
+
+--------------------------------------------------
+Conclusion
+--------------------------------------------------
+
+The pretrained ResNet-18 model achieved a test accuracy of 93.90% and a macro F1-score of 0.9575 after 10 epochs of training.
+
+The model showed steady improvement during training, with training accuracy increasing from 76.09% in the first epoch to 98.85% in the final epoch. Validation accuracy also improved from 77.10% in the first epoch to 96.93% in the final epoch.
+
+The model achieved strong classification performance across all four classes. The Moderate Impairment class achieved a precision, recall, and F1-score of 1.00. The Mild Impairment class achieved an F1-score of 0.97, while the No Impairment and Very Mild Impairment classes achieved F1-scores of 0.95 and 0.92 respectively.
+
+The results demonstrate that pretrained ResNet-18 can learn effective features for Alzheimer MRI classification and achieve strong performance on the test dataset.
+
+Compared with the previous experiments, ResNet-18 achieved a lower test accuracy than the baseline CNN, which achieved 96.17% accuracy. However, ResNet-18 achieved a high macro F1-score of 0.9575, indicating strong performance across the four classes.
+
+Overall, this experiment demonstrates the effectiveness of transfer learning with a pretrained ResNet-18 architecture for the given Alzheimer MRI classification task.
