@@ -85,7 +85,7 @@ The dataset consists of **MRI brain images** categorized into multiple classes r
 
 4. **Training**
    - Loss function: CrossEntropyLoss
-   - Optimizer: Adam / SGD
+   - Optimizer: Adam 
    - Epoch-based training loop
 
 5. **Evaluation**
