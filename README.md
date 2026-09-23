@@ -128,7 +128,9 @@ dataset/
 
 3. **Model Architecture**
    - Convolutional layers
-   - Activation functions
+   - Activation functions (ReLU)
+   - Pooling layers (Max Pooling)
+   - Flattening
    - Fully connected layers
 
 4. **Training**
