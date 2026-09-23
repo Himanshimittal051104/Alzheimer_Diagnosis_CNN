@@ -16,6 +16,15 @@ Training Configuration:
 - Dropout Probability: 0.5
 
 --------------------------------------------------
+Why Dropout?
+--------------------------------------------------
+The baseline CNN achieved very high training accuracy, reaching approximately 99.9%, while the validation accuracy was lower and fluctuated across epochs. This indicates that the model may be overfitting to the training data.
+
+To reduce overfitting, Dropout was introduced into the network. Dropout randomly deactivates a fraction of neurons during training, forcing the model to learn more robust features instead of depending heavily on specific neurons.
+
+In this experiment, Dropout(0.5) was added to the fully connected layers. During training, approximately 50% of the activations are randomly set to zero. During evaluation, Dropout is automatically disabled and all neurons are used.
+
+--------------------------------------------------
 Training History
 --------------------------------------------------
 
@@ -53,3 +62,8 @@ accuracy                                      0.95       1279
 macro avg               0.96      0.96        0.96       1279
 weighted avg            0.95      0.95        0.95       1279
 
+--------------------------------------------------
+Conclusion
+--------------------------------------------------
+
+The Dropout model achieved a test accuracy of 95.31% and a macro F1-score of 0.9591. Compared with the baseline CNN, the training accuracy was slightly lower, while the validation performance remained strong. This suggests that Dropout helped control the model's tendency to overfit, although the overall test accuracy was slightly lower than the baseline.
