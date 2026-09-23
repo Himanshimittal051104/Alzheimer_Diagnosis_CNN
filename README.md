@@ -190,26 +190,36 @@ experiments/
 ├── 05_cnn_tuning.ipynb
 └── 06_resnet_18.ipynb
 ```
+Each notebook contains the corresponding model implementation, training process, evaluation metrics, and visualizations.
 
 ---
 
-## 📈 Results
 
-The trained CNN model is evaluated using:
 
-- Accuracy score
-- Precision, Recall, F1-score (Classification Report)
-- Confusion Matrix for class-wise performance analysis
+---
+
+## 📈 Results and Comparison
+Experiment	   Modification	         Test Accuracy	      Macro F1
+1	            Baseline CNN	         96.17%	            0.9684
+2	            Batch Normalization	   35.03%	            0.1297
+3	            Dropout	               96.09%	            0.9714
+4	            Data Augmentation	      60.44%	            0.6061
+5	            CNN Tuning	            94.14%	            0.9384
+6	            ResNet-18	            93.90%	            0.9575
+
+The experiments demonstrate how changes in CNN architecture, regularization, data transformations, hyperparameters, and transfer learning can produce substantially different results on the same dataset.
 
 ---
 
 ## 🔮 Future Improvements
 
-- Apply Transfer Learning (ResNet, VGG, EfficientNet)
-- Hyperparameter tuning
-- Add model checkpoint saving
-- Deploy using Flask / FastAPI
-- Build a web interface for real-time predictions
+- Experiment with additional transfer learning architectures such as VGG and EfficientNet.
+- Perform more extensive hyperparameter tuning.
+- Add model checkpoint saving and loading.
+- Evaluate models using additional datasets.
+- Deploy the trained model using Flask or FastAPI.
+- Build a web interface for MRI image classification.
+- Investigate class imbalance and additional evaluation strategies.
 
 ---
 
