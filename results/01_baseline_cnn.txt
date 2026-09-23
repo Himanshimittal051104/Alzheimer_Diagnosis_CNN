@@ -51,3 +51,9 @@ Very Mild Impairment    0.96      0.95        0.95        448
 accuracy                                      0.96       1279
 macro avg               0.97      0.97        0.97       1279
 weighted avg            0.96      0.96        0.96       1279
+
+--------------------------------------------------
+Conclusion
+--------------------------------------------------
+
+The baseline CNN achieved a test accuracy of 96.17% and a macro F1-score of 0.9684. The model achieved very high training accuracy, reaching approximately 99.9%, while maintaining strong validation and test performance. This baseline provides a reference point for evaluating the effect of techniques such as Batch Normalization, Dropout, Data Augmentation, and CNN depth in the subsequent experiments.
