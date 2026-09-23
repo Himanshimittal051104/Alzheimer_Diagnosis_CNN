@@ -130,7 +130,6 @@ Batch Normalization did not improve the baseline CNN in this configuration.
 
 Although training accuracy increased to 75.06%, validation performance remained highly unstable.
 
-The final test accuracy was 40.89% with a macro F1 score of
-0.1924.
+The final test accuracy was 40.89% with a macro F1 score of 0.1924.
 
 Changing batch size and BatchNorm momentum did not resolve the instability. 
