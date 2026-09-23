@@ -19,6 +19,7 @@ Training Configuration:
 --------------------------------------------------
 Why Data Augmentation?
 --------------------------------------------------
+
 The baseline CNN achieved high performance on the training data. Data augmentation was introduced to expose the model to different variations of the training MRI images and help it learn features that are less dependent on the exact appearance of individual training images.
 
 In this experiment, Random Rotation and Random Horizontal Flip were applied to the training images. These transformations were used to create variations of the original MRI images while preserving their class labels.
@@ -30,43 +31,49 @@ Training History
 --------------------------------------------------
 
 Epoch    Train Loss    Train Acc    Val Loss    Val Acc
-1        1.3924        0.2738       0.9052      0.5539
-2        0.6371        0.7095       0.4922      0.7755
-3        0.4711        0.7918       0.4069      0.8180
-4        0.3920        0.8233       0.3569      0.8383
-5        0.3348        0.8568       0.3049      0.8729
-6        0.2918        0.8798       0.2916      0.8699
-7        0.2503        0.8995       0.2405      0.9021
-8        0.2104        0.9146       0.2315      0.9055
-9        0.1883        0.9265       0.2330      0.9065
-10       0.1554        0.9403       0.2819      0.8996
+1        1.1255        0.4623       0.7823      0.6251
+2        0.6993        0.6792       0.7267      0.6879
+3        0.6314        0.7181       0.6578      0.6944
+4        0.6189        0.7322       0.5254      0.7705
+5        0.5680        0.7506       0.5346      0.7621
+6        0.5434        0.7589       0.5316      0.7715
+7        0.5219        0.7657       0.4918      0.7784
+8        0.5070        0.7763       0.5109      0.7750
+9        0.4975        0.7796       0.4582      0.7893
+10       0.4807        0.7916       0.4596      0.7982
 
 --------------------------------------------------
 Overall Performance
 --------------------------------------------------
 
-Test Accuracy: 0.8045
-Macro F1 Score: 0.8544
+Test Accuracy: 0.6044
+Macro F1 Score: 0.6061
 
 --------------------------------------------------
 Classification Report
 --------------------------------------------------
 
-                     precision    recall    f1-score    support
+                     precision    recall  f1-score    support
 
-Mild Impairment         0.85      0.79        0.82        179
-Moderate Impairment     1.00      1.00        1.00         12
-No Impairment           0.96      0.71        0.82        640
-Very Mild Impairment    0.67      0.94        0.78        448
+Mild Impairment          0.45      0.49      0.47        179
+Moderate Impairment      0.62      0.83      0.71         12
+No Impairment            0.77      0.62      0.69        640
+Very Mild Impairment     0.50      0.62      0.56        448
 
-accuracy                                      0.80       1279
-macro avg               0.87      0.86        0.85       1279
-weighted avg            0.84      0.80        0.81       1279
+accuracy                                      0.60       1279
+macro avg                0.59      0.64      0.61       1279
+weighted avg             0.63      0.60      0.61       1279
 
 --------------------------------------------------
 Conclusion
 --------------------------------------------------
 
-The Data Augmentation model achieved a test accuracy of 80.45% and a macro F1-score of 0.8544. The model successfully learned from the augmented training data, reaching 94.03% training accuracy and 90.65% validation accuracy at its best validation epoch.
+The Data Augmentation model achieved a test accuracy of 60.44% and a macro F1-score of 0.6061.
 
-Compared with the baseline CNN, the overall test performance was lower. Therefore, for this dataset and augmentation configuration, data augmentation did not improve the overall test performance, although it provided a useful experiment for studying the effect of input transformations on model generalization.
+The model showed steady improvement during training, with training accuracy increasing from 46.23% in the first epoch to 79.16% in the final epoch. Validation accuracy also improved from 62.51% in the first epoch to 79.82% in the final epoch.
+
+The classification report shows that the Moderate Impairment class achieved an F1-score of 0.71. No Impairment achieved an F1-score of 0.69, Very Mild Impairment achieved an F1-score of 0.56, and Mild Impairment achieved an F1-score of 0.47.
+
+Compared with the baseline CNN, which achieved 96.17% test accuracy, this data augmentation configuration resulted in substantially lower test performance. Therefore, the selected augmentation transformations did not improve the overall performance on this dataset.
+
+Overall, this experiment demonstrates that data augmentation can significantly affect CNN performance, and the choice and order of transformations are important for Alzheimer MRI classification.
