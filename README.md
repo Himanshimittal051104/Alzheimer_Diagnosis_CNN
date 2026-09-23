@@ -1,32 +1,44 @@
 # 🧠 Alzheimer’s Disease Diagnosis using CNN (PyTorch)
 
-This project implements a **Convolutional Neural Network (CNN)** using **PyTorch** to classify brain MRI images for **Alzheimer’s Disease diagnosis**.  
-The model learns visual patterns from MRI scans to distinguish between different stages of Alzheimer’s.
+This project implements a **Convolutional Neural Network (CNN)** using **PyTorch** to classify brain MRI images into four categories related to Alzheimer’s disease.
+
+The project focuses on building a CNN from scratch and systematically studying the effect of different techniques such as **Batch Normalization, Dropout, and Data Augmentation** on model performance.
 
 ---
 
 ## 📌 Project Overview
 
-Alzheimer’s Disease is a progressive neurological disorder affecting memory and cognitive abilities.  
-Early and accurate diagnosis is critical for effective treatment planning.
+Alzheimer’s Disease is a progressive neurological disorder that affects memory and cognitive abilities.
 
 In this project:
+
 - MRI brain images are preprocessed and transformed
 - A CNN model is built and trained using **PyTorch**
-- Model performance is evaluated using **accuracy, classification report, and confusion matrix**
+- Different CNN configurations and regularization techniques are experimentally evaluated
+- Model performance is evaluated using:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-score
+  - Confusion Matrix
+
+The project is organized as a series of experiments, with the **Baseline CNN** serving as the reference model.
 
 ---
 
 ## 🚀 Key Features
 
-- CNN-based image classification
-- MRI image preprocessing using `torchvision.transforms`
+- CNN-based MRI image classification
+- Image preprocessing using `torchvision.transforms`
 - Training and validation using PyTorch
-- Model evaluation with:
+- GPU-accelerated training using CUDA when available
+- Evaluation using:
   - Accuracy
   - Classification Report
-  - Confusion Matrix visualization
-- Implemented entirely in **Jupyter Notebook**
+  - Confusion Matrix
+  - Macro F1-score
+- Systematic comparison of different CNN techniques
+- Experiments implemented using Jupyter Notebooks
 
 ---
 
@@ -34,36 +46,76 @@ In this project:
 
 - **Python**
 - **PyTorch**
-- Torchvision
-- NumPy
-- Matplotlib
-- Scikit-learn
-- Jupyter Notebook
+- **Torchvision**
+- **NumPy**
+- **Matplotlib**
+- **Scikit-learn**
+- **Jupyter Notebook**
 
 ---
 
 ## 📂 Project Structure
-```md
+
+```text
 Alzheimer_Diagnosis_CNN/
 │
+├── dataset/                         # Dataset (not included in repository)
+│
+├── experiments/
+│   ├── 01_baseline_cnn.ipynb
+│   ├── 02_batch_normalization.ipynb
+│   ├── 03_dropout.ipynb
+│   ├── 04_data_augmenttaion.ipynb
+│   ├── 05_cnn_tuning.ipynb
+│   └── 06_resnet_18.ipynb
+│
+├── results/
+│   ├── 01_baseline_cnn.txt
+│   ├── 02_batch_normalization.txt
+│   ├── 03_dropout.txt
+│   ├── 04_data_augmenttaion.txt
+│   ├── 05_cnn_tuning.txt
+│   └── 06_resnet_18.txt
+│
+├── models/
+│
 ├── Alzheimer_project_CNN.ipynb
+├── Alzheimer_project.ipynb
 ├── README.md
-└── dataset/ (not included in repository)
+└── .gitignore
 ```
 
 ---
 
 ## 📊 Dataset
 
-The dataset consists of **MRI brain images** categorized into multiple classes representing different stages of Alzheimer’s Disease, such as:
+The dataset consists of brain MRI images divided into four classes:
 
-- Non Demented  
-- Very Mild Demented  
-- Mild Demented  
-- Moderate Demented  
+Mild Impairment
+Moderate Impairment
+No Impairment
+Very Mild Impairment
 
-> ⚠️ The dataset is **not included** in this repository due to size limitations.  
-> Please place the dataset in the appropriate directory before running the notebook.
+The dataset is loaded using torchvision.datasets.ImageFolder.
+
+⚠️ The dataset is not included in this repository due to its size.
+
+The expected directory structure is:
+```text
+dataset/
+│
+├── train/
+│   ├── Mild Impairment/
+│   ├── Moderate Impairment/
+│   ├── No Impairment/
+│   └── Very Mild Impairment/
+│
+└── test/
+    ├── Mild Impairment/
+    ├── Moderate Impairment/
+    ├── No Impairment/
+    └── Very Mild Impairment/
+```
 
 ---
 
