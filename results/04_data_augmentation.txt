@@ -60,7 +60,7 @@ Moderate Impairment      0.62      0.83      0.71         12
 No Impairment            0.77      0.62      0.69        640
 Very Mild Impairment     0.50      0.62      0.56        448
 
-accuracy                                      0.60       1279
+accuracy                                     0.60       1279
 macro avg                0.59      0.64      0.61       1279
 weighted avg             0.63      0.60      0.61       1279
 
