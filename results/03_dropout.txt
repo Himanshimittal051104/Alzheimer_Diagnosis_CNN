@@ -1,0 +1,54 @@
+==================================================
+Experiment 3: Dropout
+==================================================
+
+Model:
+CNN with Dropout
+
+Training Configuration:
+- Epochs: 10
+- Batch Size: 16
+- Optimizer: Adam
+- Learning Rate: 0.001
+- Loss Function: CrossEntropyLoss
+- Input Size: 224 x 224
+- Number of Classes: 4
+- Dropout Probability: 0.5
+
+--------------------------------------------------
+Training History
+--------------------------------------------------
+
+Epoch    Train Loss    Train Acc    Val Loss    Val Acc
+1        0.7032        0.6956       0.3660      0.8595
+2        0.3078        0.8702       0.1994      0.9214
+3        0.1969        0.9238       0.1499      0.9416
+4        0.1286        0.9505       0.1133      0.9585
+5        0.0965        0.9639       0.1043      0.9609
+6        0.0859        0.9687       0.1067      0.9585
+7        0.0658        0.9754       0.0929      0.9629
+8        0.0571        0.9795       0.1262      0.9570
+9        0.0554        0.9801       0.0773      0.9743
+10       0.0664        0.9765       0.0638      0.9802
+
+--------------------------------------------------
+Overall Performance
+--------------------------------------------------
+
+Test Accuracy: 0.9531
+Macro F1 Score: 0.9591
+
+--------------------------------------------------
+Classification Report
+--------------------------------------------------
+
+                     precision    recall    f1-score    support
+
+Mild Impairment         0.92      0.94        0.93        179
+Moderate Impairment     1.00      1.00        1.00         12
+No Impairment           0.95      0.99        0.97        640
+Very Mild Impairment    0.98      0.91        0.94        448
+
+accuracy                                      0.95       1279
+macro avg               0.96      0.96        0.96       1279
+weighted avg            0.95      0.95        0.95       1279
