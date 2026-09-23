@@ -77,10 +77,6 @@ Alzheimer_Diagnosis_CNN/
 │   ├── 05_cnn_tuning.txt
 │   └── 06_resnet_18.txt
 │
-├── models/
-│
-├── Alzheimer_project_CNN.ipynb
-├── Alzheimer_project.ipynb
 ├── README.md
 └── .gitignore
 ```
