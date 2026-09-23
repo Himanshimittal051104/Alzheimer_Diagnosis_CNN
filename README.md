@@ -236,14 +236,14 @@ The project contains six experiments.
 
 - The tested configurations included:
 
-- Additional convolutional layer
-- Batch size tuning
-- Learning rate tuning
+  - Additional convolutional layer
+  - Batch size tuning
+  - Learning rate tuning
 
 - The configuration using a learning rate of 0.0001 and batch size 16 achieved:
 
-- Test Accuracy: 94.14%
-- Macro F1: 0.9384
+  - Test Accuracy: 94.14%
+  - Macro F1: 0.9384
 
 ### Experiment 6 — ResNet-18
 
