@@ -199,13 +199,15 @@ Each notebook contains the corresponding model implementation, training process,
 ---
 
 ## 📈 Results and Comparison
-Experiment	   Modification	         Test Accuracy	      Macro F1
-1	            Baseline CNN	         96.17%	            0.9684
-2	            Batch Normalization	   35.03%	            0.1297
-3	            Dropout	               96.09%	            0.9714
-4	            Data Augmentation	      60.44%	            0.6061
-5	            CNN Tuning	            94.14%	            0.9384
-6	            ResNet-18	            93.90%	            0.9575
+
+| Experiment | Modification | Test Accuracy | Macro F1 |
+|------------|--------------|---------------|----------|
+| 1 | Baseline CNN | 96.17% | 0.9684 |
+| 2 | Batch Normalization | 35.03% | 0.1297 |
+| 3 | Dropout | 96.09% | 0.9714 |
+| 4 | Data Augmentation | 60.44% | 0.6061 |
+| 5 | CNN Tuning | 94.14% | 0.9384 |
+| 6 | ResNet-18 | 93.90% | 0.9575 |
 
 The experiments demonstrate how changes in CNN architecture, regularization, data transformations, hyperparameters, and transfer learning can produce substantially different results on the same dataset.
 
