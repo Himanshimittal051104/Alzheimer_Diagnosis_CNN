@@ -29,41 +29,48 @@ Training History
 --------------------------------------------------
 
 Epoch    Train Loss    Train Acc    Val Loss    Val Acc
-1        0.7032        0.6956       0.3660      0.8595
-2        0.3078        0.8702       0.1994      0.9214
-3        0.1969        0.9238       0.1499      0.9416
-4        0.1286        0.9505       0.1133      0.9585
-5        0.0965        0.9639       0.1043      0.9609
-6        0.0859        0.9687       0.1067      0.9585
-7        0.0658        0.9754       0.0929      0.9629
-8        0.0571        0.9795       0.1262      0.9570
-9        0.0554        0.9801       0.0773      0.9743
-10       0.0664        0.9765       0.0638      0.9802
+1        0.6929        0.7052       0.3363      0.8511
+2        0.3216        0.8686       0.2008      0.9169
+3        0.1918        0.9227       0.1858      0.9224
+4        0.1203        0.9545       0.1128      0.9560
+5        0.0903        0.9661       0.1032      0.9634
+6        0.0606        0.9781       0.0991      0.9693
+7        0.0616        0.9769       0.1014      0.9624
+8        0.0583        0.9790       0.1162      0.9590
+9        0.0606        0.9776       0.0828      0.9723
+10       0.0380        0.9855       0.0749      0.9773
 
 --------------------------------------------------
 Overall Performance
 --------------------------------------------------
 
-Test Accuracy: 0.9531
-Macro F1 Score: 0.9591
+Test Accuracy: 0.9609
+Macro F1 Score: 0.9714
 
 --------------------------------------------------
 Classification Report
 --------------------------------------------------
+                     precision    recall  f1-score   support
 
-                     precision    recall    f1-score    support
+Mild Impairment          0.97      0.97      0.97       179
+Moderate Impairment      1.00      1.00      1.00        12
+No Impairment            0.97      0.97      0.97       640
+Very Mild Impairment     0.95      0.95      0.95       448
 
-Mild Impairment         0.92      0.94        0.93        179
-Moderate Impairment     1.00      1.00        1.00         12
-No Impairment           0.95      0.99        0.97        640
-Very Mild Impairment    0.98      0.91        0.94        448
-
-accuracy                                      0.95       1279
-macro avg               0.96      0.96        0.96       1279
-weighted avg            0.95      0.95        0.95       1279
+accuracy                                     0.96      1279
+macro avg                0.97      0.97      0.97      1279
+weighted avg             0.96      0.96      0.96      1279
 
 --------------------------------------------------
 Conclusion
 --------------------------------------------------
 
-The Dropout model achieved a test accuracy of 95.31% and a macro F1-score of 0.9591. Compared with the baseline CNN, the training accuracy was slightly lower, while the validation performance remained strong. This suggests that Dropout helped control the model's tendency to overfit, although the overall test accuracy was slightly lower than the baseline.
+The Dropout model achieved a test accuracy of 96.09% and a macro F1-score of 0.9714.
+
+The model showed consistent improvement during training, with training accuracy increasing from 70.52% in the first epoch to 98.55% in the final epoch. Validation accuracy also improved from 85.11% to 97.73%.
+
+The model achieved strong classification performance across all four classes. The Moderate Impairment class achieved a precision, recall, and F1-score of 1.00. Mild Impairment and No Impairment both achieved an F1-score of 0.97, while Very Mild Impairment achieved an F1-score of 0.95.
+
+Compared with the baseline CNN, the Dropout model achieved slightly lower training accuracy but strong validation and test performance. The results indicate that Dropout helped reduce overfitting while maintaining strong classification performance.
+
+Overall, the experiment demonstrates that adding Dropout with a probability of 0.5 can improve the generalization performance of the CNN for Alzheimer MRI classification.
