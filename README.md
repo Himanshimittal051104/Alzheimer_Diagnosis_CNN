@@ -91,10 +91,10 @@ Alzheimer_Diagnosis_CNN/
 
 The dataset consists of brain MRI images divided into four classes:
 
-Mild Impairment
-Moderate Impairment
-No Impairment
-Very Mild Impairment
+- Mild Impairment
+- Moderate Impairment
+- No Impairment
+- Very Mild Impairment
 
 The dataset is loaded using torchvision.datasets.ImageFolder.
 
