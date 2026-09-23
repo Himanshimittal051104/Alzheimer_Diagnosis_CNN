@@ -198,7 +198,7 @@ Each notebook contains the corresponding model implementation, training process,
 
 The project contains six experiments.
 
-### Experiment 1 — Baseline CNN
+- ### Experiment 1 — Baseline CNN
 
 A basic CNN architecture was implemented as the reference model.
 
