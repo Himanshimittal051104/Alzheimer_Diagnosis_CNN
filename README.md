@@ -68,7 +68,7 @@ Alzheimer_Diagnosis_CNN/
 │   ├── 01_baseline_cnn.ipynb
 │   ├── 02_batch_normalization.ipynb
 │   ├── 03_dropout.ipynb
-│   ├── 04_data_augmenttaion.ipynb
+│   ├── 04_data_augmentation.ipynb
 │   ├── 05_cnn_tuning.ipynb
 │   └── 06_resnet_18.ipynb
 │
@@ -76,7 +76,7 @@ Alzheimer_Diagnosis_CNN/
 │   ├── 01_baseline_cnn.txt
 │   ├── 02_batch_normalization.txt
 │   ├── 03_dropout.txt
-│   ├── 04_data_augmenttaion.txt
+│   ├── 04_data_augmentation.txt
 │   ├── 05_cnn_tuning.txt
 │   └── 06_resnet_18.txt
 │
